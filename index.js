@@ -76,21 +76,24 @@ var menuLinks = [
     ]},
   ];
 
-// 5.1
-  topMenuLinks = document.querySelectorAll('a');
-  console.dir(topMenuLinks);
-  showingSubMenu = false;
+ // 5.1
+   topMenuLinks = document.querySelectorAll('a');
+   console.dir(topMenuLinks);
+   showingSubMenu = false;
 
 // 5.2
 
-topMenuEl.addEventListener('click', function(a){
-  preventDefault()
-  if(a.target.tagName === 'a')
-  return '';
-  console.dir(a.target);
+ topMenuEl.addEventListener('click', function(event){
+   event.preventDefault();
+   console.log('a');
+   if(event.target.tagName !== 'a'){
+   return;
+   }
   
-})
-
+   console.dir(event);
+  });
+  
+  //  5.3
 
 
 
