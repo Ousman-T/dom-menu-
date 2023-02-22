@@ -90,10 +90,10 @@ var menuLinks = [
    return;
    }
   
-   console.dir(event);
   });
   
   //  5.3
+
 
 
 
