@@ -83,16 +83,32 @@ var menuLinks = [
 
 // 5.2
 
- topMenuEl.addEventListener('click', function(event){
-   event.preventDefault();
-   console.log('a');
-   if(event.target.tagName !== 'a'){
-   return;
-   }
+topMenuEl.addEventListener('click', function(event){
+  event.preventDefault();
+  console.log('a');
+  if(event.target.tagName !== 'a'){
+    return;
+   //  5.3
+  }   if(event.target.classList.contains('active')){
+    console.log(event.target);
+    event.target.classList.remove('active');
+    showingSubMenu = false;
+    console.dir(event.target);
+    subMenuEl.style.top = '0';
+    return;
+    }
   
-  });
   
-  //  5.3
+    // 5.4
+    event.target.classList.remove('active');
+    
+    // 5.5
+    event.target.classList.add('active');
+    console.dir(event.target)
+});
+    // 5.6
+
+  
 
 
 
