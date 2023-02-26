@@ -95,16 +95,22 @@ topMenuEl.addEventListener('click', function(event){
     showingSubMenu = false;
     console.dir(event.target);
     subMenuEl.style.top = '0';
+    console.dir();
+    event.target.classList.remove('active');
     return;
     }
   
   
     // 5.4
-    event.target.classList.remove('active');
+    // event.target.classList.remove('active');
     
-    // 5.5
+    // // 5.5
     event.target.classList.add('active');
-    console.dir(event.target)
+    console.dir(event.target);
+    console.dir(subMenuEl);
+    console.dir(menuLinks);
+    let elementName = event.target.innerHTML;
+    console.log(elementName);
 });
     // 5.6
 
